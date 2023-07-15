@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kidney</title>
+        <link rel="stylesheet" href="../static/style.css"/>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       -->
+      </head>
+    
+      
+<!-- Adding styles like colour, height, width, border to our html page -->
+<body>
+  <header class="header">
+       
+    <nav class="navbar">
+        <div class="container">
+
+            <h1 class="logo lg-heading">Check-Up</h1>
+             <ul class="nav-items">
+                 <li class="nav-item"><a href="./index.html">Home</a></li>
+                 <li class="nav-item"><a href="./heart_details.html">Heart Disease</a></li>
+                 <li class="nav-item"><a href="./cancer_details.html">Cancer</a></li>
+                 <li class="nav-item"><a href="./diabetes_details.html">Diabetes</a></li>
+                 <li class="nav-item"><a href="./kidney_details.html">Kidney Disease</a></li>
+             </ul>
+        </div>
+    </nav>
+    </header>
+  
+
+<div class="container">
+  <div class="title">Kidney disease Prediction</div>
+  <div class="content">
+    <form action="{{ url_for('predict_kidney')}}" method="post">
+      <div class="user-details">
+        <!-- age - age
+bp - blood pressure
+sg - specific gravity
+al - albumin
+su - sugar
+rbc - red blood cells
+pc - pus cell
+pcc - pus cell clumps
+ba - bacteria
+bgr - blood glucose random
+bu - blood urea
+sc - serum creatinine
+sod - sodium
+pot - potassium
+hemo - hemoglobin
+pcv - packed cell volume
+wc - white blood cell count
+rc - red blood cell count
+htn - hypertension
+dm - diabetes mellitus
+cad - coronary artery disease
+appet - appetite
+pe - pedal edema
+ane - anemia
+class - class  -->
+        <div class="input-box">
+          <span class="details">Age</span>
+          <input type="text" id="age" name="age" placeholder="age in years" required="required">
+        </div>
+        <div class="input-box">
+          <span class="details">Blood pressure</span>
+          <input type="text" id="bp" name="bp" placeholder="bp(mm/Hg)(50-180) " required="required">
+        </div>
+        <div class="input-box">
+          <span class="details">Albumin</span>
+          <input type="text" id="al" name="al" placeholder="Albumin(0-5)" required="required">
+        </div>
+        <div class="input-box">
+          <span class="details">Sugar</span>
+          <input type="text" id="su" name="su" placeholder="sugar(0-5)" required="required">
+        </div>
+        <div class="input-box">
+          <span class="details">RBC</span>
+          <input type="text" id="rbc" name="rbc" placeholder="0= normal; 1 = abnormal" required="required">
+        </div>
+        <div class="input-box">
+          <span class="details">Pus cell</span>
+          <input type="text" id="pc" name="pc" placeholder="0= normal; 1 = abnormal" required="required">
+        </div>
+      
+      <div class="input-box">
+        <span class="details">Pus cell clumps</span>
+        <input type="text" id="pcc" name="pcc" placeholder="0 = notpresent; 1= present" required="required">
+      </div>
+    
+    <div class="input-box">
+      <span class="details">Bacteria</span>
+      <input type="text" id="ba" name="ba" placeholder="0 = notpresent; 1= present" required="required"> 
+    </div>
+  
+
+  <div class="input-box">
+    <span class="details">Blood glucose random</span>
+    <input type="text" id="bgr" name="bgr" placeholder="BGR(22-490)" required="required"> 
+  </div>
+
+
+<div class="input-box">
+    <span class="details">Blood urea</span>
+    <input type="text" id="bu" name="bu" placeholder="blood urea(1.5-391)" required="required"> 
+  </div>
+
+
+<div class="input-box">
+    <span class="details">Serum creatinine</span>
+    <input type="text" id="sc" name="sc" placeholder="SC(0.4-76)" required="required"> 
+  </div>
+
+ <div class="input-box">
+    <span class="details">Potassium</span>
+    <input type="text" id="pot" name="pot" placeholder="potassium(2.5-47)" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">White blood cell count</span>
+    <input type="text" id="wc" name="wc" placeholder="white blood cell count" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">Hypertension</span>
+    <input type="text" id="htn" name="htn" placeholder="1 = yes; 0 = no" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">Diabetes mellitus</span>
+    <input type="text" id="dm" name="dm" placeholder="1 = yes; 0 = no" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">Coronary artery disease</span>
+    <input type="text" id="cad" name="cad" placeholder="1 = yes; 0 = no" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">Pedal edema</span>
+    <input type="text" id="pe" name="pe" placeholder="1 = yes; 0 = no" required="required"> 
+  </div>
+
+<div class="input-box">
+    <span class="details">Anemia</span>
+    <input type="text" id="ane" name="ane" placeholder="1 = yes; 0 = no" required="required"> 
+  </div>
+</div>
+  
+      
+      <div class="button">
+        <input type="submit" value="Predict">
+      </div>
+    </form>
+  </div>
+</div>
+<h3>{{ prediction_text }}</h3>
+
+<!-- <script>
+  window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script> -->
+
+
+</body>
+</html>

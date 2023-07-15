@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heart-disease</title>
+        
+
+        
+      </head>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+     body{
+      
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+  
+ 
+  
+ 
+  
+
+
+p{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+h3{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+.content {
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+.b{
+    padding-left: 2%;
+
+}
+    </style>
+    
+<!-- Adding styles like colour, height, width, border to our html page -->
+<body>
+
+
+
+<h1>
+    HEART-DISEASE </h1><hr>
+    <br>
+    <div class="content">
+  <p>
+    The term heart disease is often used interchangeably with the term cardiovascular disease.  <br><br>
+    Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke. <br><br>
+    Heart disease describes a range of conditions that affect your heart.
+    <br><br> Heart diseases include: Blood vessel disease, such as coronary artery disease; Heart rhythm problems (arrhythmias); Heart valve disease; Disease of the heart muscle.
+   
+ <br><br>
+   
+    <h3>Symptoms</h3><p>
+       
+    Chest pain, chest tightness, chest pressure and chest discomfort (angina).
+    <br><br>Shortness of breath.<br><br>weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed.<br><br>Pain in the neck, jaw, throat, upper abdomen or back</p>
+    <div class = "b">  <button class="card-btn"><a href = "{{url_for('predict_heart') }}">Take test</a><span>&rarr;</span></button>
+    </div>
+    
+  </div> 
+</body>
+</html>

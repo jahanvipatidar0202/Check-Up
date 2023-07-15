@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diabetes</title>
+        
+
+        
+      </head>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+     body{
+      
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+  
+ 
+  
+ 
+  
+
+
+p{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+h3{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+.content {
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+.b{
+    padding-left: 2%;
+
+}
+
+    </style>
+    
+<!-- Adding styles like colour, height, width, border to our html page -->
+<body>
+
+
+
+<h1>
+    DIABETES </h1><hr>
+    <br>
+    <div class="content">
+  <p>
+    Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. <br><br>
+    Blood glucose is your main source of energy and comes from the food you eat.<br><br>
+     Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. <br><br>
+    Sometimes your body doesn’t make enough—or any—insulin or doesn’t use insulin well. Glucose then stays in your blood and doesn’t reach your cells.<br></p>
+    <h3>Symptoms</h3><p>Urinating often.<br><br>Feeling very thirsty.<br><br>Extreme fatigue.<br><br>Blurry vision.<br><br></p>
+    <div class = "b">  <button class="card-btn"><a href = "{{url_for('predict_diabetes') }}">Take test</a><span>&rarr;</span></button>
+    </div>
+    
+  </div> 
+</body>
+</html>

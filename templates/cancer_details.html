@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cancer</title>
+        
+
+        
+      </head>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+     body{
+      
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+  
+ 
+  
+ 
+  
+
+
+p{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+h3{
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    
+}
+.content {
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+.b{
+    padding-left: 2%;
+
+}
+
+    </style>
+    
+<!-- Adding styles like colour, height, width, border to our html page -->
+<body>
+
+
+
+<h1>
+    BREAST-CANCER </h1><hr>
+    <br>
+    <div class="content">
+  <p>
+    Breast cancer is a cancer that forms in the cells of the breasts. <br><br>
+    After skin cancer, breast cancer is the most common cancer diagnosed in women in the United States. <br><br>
+    Breast cancer can occur in both men and women, but it's far more common in women. <br><br>
+   
+    <h3>Symptoms</h3><p>
+        A breast lump or thickening that feels different from the surrounding tissue.
+        <br><br>Change in the size, shape or appearance of a breast.<br><br>Changes to the skin over the breast, such as dimpling.<br><br>Redness or pitting of the skin over your breast, like the skin of an orange.<br><br></p>
+      <div class = "b">  <button class="card-btn"><a href = "{{url_for('predict_cancer') }}">Take test</a><span>&rarr;</span></button>
+      </div>
+  </div> 
+</body>
+</html>

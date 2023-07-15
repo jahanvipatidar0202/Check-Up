@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+.column:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+.card-btn {
+    
+    display: block;
+    width: 50%;
+    padding: 0.8rem; 
+    font-size: 1rem;
+    text-align: center;
+    color: #3363ff;
+    background-color: #d8e0fd;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+  }
+  
+  .card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+  }
+  
+  .card-btn:hover,
+  .card-btn:active {
+    background-color: #c2cffc;
+  }
+  
+  .card-btn:hover span,
+  .card-btn:active span {
+    margin-left: 1.5rem;
+  }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>CHECK-UP</h1>
+<hr>
+
+<h2>ONE PLACE FOR MULTIPLE DISEASE</h2>
+<p>So, you have a report? We have your disease prediction!</p>
+
+<div class="content">
+    <img src="../static/img/d1.jpg" alt="Bear" style="width:100%">
+    
+    <h3>This portal provides prediction help for 4 diseases:</h3>
+        <p>Breast cancer</p>
+    <p> Diabetes</p>
+    <p> Heart disease</p>
+    <p> Kidney disease</p>
+     <br>
+
+    <p><h3>Follow the steps to get the predictions: </h3>
+        <p> Go to the prediction page of the disease you wish to get results</p>
+            <p> Take out your report, and fill the values from the report into the form present on your screen</p>
+                <p>Click on the prediction button, and the result will be on your screen.</p> </p>
+
+  </div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="../static/img/d2.jpg" alt="diabetes" style="width:100%" height="350px">
+      <h3>Diabetes</h3>
+    <button class="card-btn"><a href = "{{url_for('diabetes_details') }}">Read details</a><span>&rarr;</span></button>
+      <br>
+      <button class="card-btn"><a href = "{{url_for('predict_diabetes') }}">Take test </a> <span>&rarr;</span></button>
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="../static/img/d3.jpg" alt="heart" style="width:100%" >
+      <h3>Heart Disease</h3>
+      <button class="card-btn"><a href = "{{url_for('heart_details') }}">Read details</a><span>&rarr;</span></button>
+      <br>
+      <button class="card-btn"><a href = "{{url_for('predict_heart')}}">Take test</a> <span>&rarr;</span></button>
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="../static/img/d6.jpg" alt="Cancer"  style="width:100%" height="400">
+      <h3>Breast Cancer</h3>
+      <button class="card-btn"><a href = "{{url_for('cancer_details') }}">Read details</a><span>&rarr;</span></button>
+      <br>
+      <button class="card-btn"><a href = "{{url_for('predict_cancer') }}">Take test</a><span>&rarr;</span></button>
+
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://th.bing.com/th/id/OIP.oLyDsEQWIl7BIVqm-X71hQHaHG?pid=ImgDet&rs=1" alt="Kidney" style="width:100%"height="400">
+      <h3>Kidney Disease</h3>
+      <button class="card-btn"><a href = "{{url_for('kidney_details') }}">Read details</a><span>&rarr;</span></button>
+      <br>
+      <button class="card-btn"><a href = "{{url_for('predict_kidney') }}">Take test </a> <span>&rarr;</span></button>
+      
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+
+
+<!-- END MAIN -->
+</div>
+
+</body>
+</html>
